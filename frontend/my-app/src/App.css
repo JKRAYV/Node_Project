@@ -7,6 +7,39 @@
   pointer-events: none;
 }
 
+body {
+  background-color: black;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(rgb(153, 0, 255) 1px, transparent 1px),
+    radial-gradient(rgb(53, 53, 53) 1px, transparent 1px),
+    radial-gradient(rgb(183, 0, 255) 1px, transparent 1px),
+    radial-gradient(rgb(153, 0, 255) 1px, transparent 1px),
+    radial-gradient(rgb(53, 53, 53) 1px, transparent 1px),
+    radial-gradient(rgb(183, 0, 255) 1px, transparent 1px);
+  background-size: 600px 600px; /* Adjust the size of the clusters */
+  background-position:
+    calc(100% * 0.1) calc(100% * 0.6),
+    calc(100% * 0.0) calc(100% * .7),
+    calc(100% * 0.2) calc(100% * 0.6),
+    calc(100% * 0.3) calc(100% * 0.9),
+    calc(100% * 0.6) calc(100% * 0.2),
+    calc(100% * 0.9) calc(100% * .3),
+    calc(100% * 0.5) calc(100% * 0.6),
+    calc(100% * 0.4) calc(100% * 0.6);
+  background-repeat: repeat;
+  z-index: -1;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
